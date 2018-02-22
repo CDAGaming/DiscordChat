@@ -2,12 +2,12 @@ buildscript {
 	repositories {
 		mavenCentral()
 		maven {
-			name "forge"
-			url "http://files.minecraftforge.net/maven/"
+			name = "forge"
+			url = "http://files.minecraftforge.net/maven/"
 		}
 		maven {
-			name "sonatype"
-			url "https://oss.sonatype.org/content/repositories/snapshots"
+			name = "sonatype"
+			url = "https://oss.sonatype.org/content/repositories/snapshots"
 		}
 	}
 	dependencies {
@@ -67,8 +67,8 @@ configurations {
 
 repositories {
 	maven {
-		name "shadowfacts"
-		url "http://maven.shadowfacts.net/"
+		name = "shadowfacts"
+		url = "http://maven.shadowfacts.net/"
 	}
 	flatDir {
 		dirs "../core/libs"

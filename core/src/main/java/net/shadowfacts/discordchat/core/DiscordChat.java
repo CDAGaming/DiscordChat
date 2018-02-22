@@ -119,9 +119,7 @@ public class DiscordChat implements IDiscordChat {
 		if (running) {
 
 			Thread thread = new Thread(this::sendQueueThread, "DiscordChat-send-queue");
-			thread.setUncaughtExceptionHandler((thrd, t) -> {
-				logger.error(t, "Uncaught exception in DiscordChat-send-queue thread");
-			});
+			thread.setUncaughtExceptionHandler((thrd, t) -> logger.error(t, "Uncaught exception in DiscordChat-send-queue thread"));
 			thread.start();
 		}
 	}

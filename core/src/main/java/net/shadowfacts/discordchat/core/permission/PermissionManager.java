@@ -32,7 +32,7 @@ public class PermissionManager implements IPermissionManager {
 
 	@Override
 	public Permission get(Role role) {
-		return permissions.containsKey(role.getId()) ? permissions.get(role.getId()) : Permission.GLOBAL;
+		return permissions.getOrDefault(role.getId(), Permission.GLOBAL);
 	}
 
 	@Override

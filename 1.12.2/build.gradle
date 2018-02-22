@@ -2,8 +2,8 @@ buildscript {
 	repositories {
 		jcenter()
 		maven {
-			name "forge"
-			url "http://files.minecraftforge.net/maven/"
+			name = "forge"
+			url = "http://files.minecraftforge.net/maven/"
 		}
 	}
 	dependencies {
@@ -12,7 +12,7 @@ buildscript {
 }
 
 plugins {
-	id "com.github.johnrengelman.shadow" version "1.2.3"
+	id "com.github.johnrengelman.shadow" version "2.0.2"
 }
 
 apply plugin: "net.minecraftforge.gradle.forge"
@@ -49,8 +49,8 @@ processResources {
 
 repositories {
 	maven {
-		name "shadowfacts"
-		url "http://maven.shadowfacts.net/"
+		name = "shadowfacts"
+		url = "http://maven.shadowfacts.net/"
 	}
 	flatDir {
 		dirs "../core/libs"
@@ -78,8 +78,8 @@ shadowJar {
 
 	dependencies {
 		include(project(":core"))
-		include(dependency("JDA:JDA:3.3.0_260:withDependencies"))
-		include(dependency("com.vdurmont:emoji-java:3.1.3"))
+		include(dependency("JDA:JDA:3.5.1_339:withDependencies"))
+		include(dependency("com.vdurmont:emoji-java:4.0.0"))
 		include(dependency("net.shadowfacts:ShadowLib:1.9.0"))
 	}
 }

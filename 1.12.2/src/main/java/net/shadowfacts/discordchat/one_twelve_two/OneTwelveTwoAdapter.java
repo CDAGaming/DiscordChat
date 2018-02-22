@@ -54,8 +54,8 @@ public class OneTwelveTwoAdapter implements IMinecraftAdapter {
 		MinecraftServer server = FMLCommonHandler.instance().getMinecraftServerInstance();
 		long[] tickTimes = server.worldTickTimes.get(dimension);
 		long sum = 0;
-		for (int i = 0; i < tickTimes.length; i++) {
-			sum += tickTimes[i];
+		for (long tickTime : tickTimes) {
+			sum += tickTime;
 		}
 		return sum / tickTimes.length * 1.0E-6D;
 	}

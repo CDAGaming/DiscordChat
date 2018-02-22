@@ -104,12 +104,12 @@ public class CommandDC extends CommandBase {
 			wrongUsage(sender, "/discordchat tell <user> <message>");
 		} else {
 			String user = args[0];
-			String message = "";
+			StringBuilder message = new StringBuilder();
 			for (int i = 1; i < args.length; i++) {
-				message += args[i];
-				if (i != args.length - 1) message += " ";
+				message.append(args[i]);
+				if (i != args.length - 1) message.append(" ");
 			}
-			discordChat.sendPrivateMessage(sender.getName(), message, user);
+			discordChat.sendPrivateMessage(sender.getName(), message.toString(), user);
 		}
 	}
 

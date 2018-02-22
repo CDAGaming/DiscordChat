@@ -5,8 +5,8 @@ plugins {
 repositories {
 	jcenter()
 	maven {
-		name "shadowfacts"
-		url "http://maven.shadowfacts.net/"
+		name = "shadowfacts"
+		url = "http://maven.shadowfacts.net/"
 	}
     flatDir {
     	dirs "libs"
